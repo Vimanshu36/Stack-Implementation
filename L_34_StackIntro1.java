@@ -1,15 +1,15 @@
 public class L_34_StackIntro1 
 {
-    protected int[] data;       //if we want to inherit these variables in inherited class 
+    protected int[] data;        
     protected int tos;
 
-    public L_34_StackIntro1()         //constructor used for initialising the values
+    public L_34_StackIntro1()         
     {
-        data = new int[5];      //default size , if user didnt enter the value of the stack
+        data = new int[5];      
         tos = -1;
     }
 
-    public L_34_StackIntro1(int cap)      //If user enters the size of the stack
+    public L_34_StackIntro1(int cap)     
     {
         data = new int[cap];
         tos = -1;
@@ -31,9 +31,9 @@ public class L_34_StackIntro1
         {
             throw new Exception("Stack is empty");
         }
-        int temp = data[tos];           //storing the top most value
-        data[tos]= 0;                   //replacing the top most value by 0 , there is no need to write this as it will get overwritten
-        tos--;                          //deceasing the value of tos
+        int temp = data[tos];           
+        data[tos]= 0;                   
+        tos--;                          
         return temp;                    
     }
 
@@ -45,12 +45,12 @@ public class L_34_StackIntro1
 
     public int size()
     {
-        return tos+1;                   //As size will be tos + 1
+        return tos+1;                   
     }
 
     public boolean isEmpty()
     {
-        return size() == 0;             //If size = 0 then return true
+        return size() == 0;             
     }
 
     public boolean isFull()
